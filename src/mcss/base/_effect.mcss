@@ -1,0 +1,84 @@
+/* 通用动画 */
+$keyframes(fadein,($prefix){
+  0%{opacity:0;}
+  100%{opacity:1;}
+});
+$keyframes(rotate,($prefix){
+  0%{$transform: rotate(0);}
+  80%{$transform: rotate(360deg);}
+  100%{$transform: rotate(360deg);}
+});
+$keyframes(rotatefast,($prefix){
+  0%{$transform: rotate(360deg);}
+  100%{$transform: rotate(0);}
+});
+/* loading按钮显示loading图标 */
+$keyframes(slideout, ($prefix){
+  0%{ width: 0;}
+  100%{ width: 18px;}
+});
+/* 浮动 */
+$keyframes(processfloat, ($prefix){
+  0%{ $transform: translate(0, -2px);}
+  50%{ $transform: translate(0, 0);}
+  100%{ $transform: translate(0, -2px);}
+});
+/* 滑出 */
+$keyframes(processslideup, ($prefix){
+  0%{ $transform: translate(0, 5px);}
+  40%{ $transform: translate(0, 5px);}
+  100%{ $transform: translate(0, 0);}
+});
+
+/*邀请有奖抖动*/
+$keyframes(bounce, ($prefix){
+    0%,20%,50%,80%,100%{transform:translateY(0);}
+    40%{transform:translateY(-10px);}
+    60%{transform:translateY(-5px);}
+});
+
+$keyframes(popin, ($prefix){
+    0%{transform:scale(.6, .6); opacity: .3;}
+    60%{transform:scale(1.1, 1.1); opacity: 1;}
+    100%{transform:scale(1, 1); opacity: 1;}
+});
+
+/*数据库助手链接*/
+$keyframes(bouncecircle, ($prefix){
+    0%,100%{transform:scale(0);}
+    50%{transform:scale(1);}
+});
+
+/* 涟漪 */
+$keyframes(ripple, ($prefix) {
+  100% {$transform: scale(12); background-color: transparent;}
+});
+
+
+.animated {
+  $animation-duration: .3s;
+}
+
+.f-ripple {
+  position: relative;
+  overflow: hidden;
+
+  .ripple_effect {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    $size: 100px;
+    $transform: scale(0);
+  }
+
+  .ripple_effect.animated {
+    $animation: ripple 1s linear;
+  }
+}
+
+.f-ripple-light {
+  .ripple_effect {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}

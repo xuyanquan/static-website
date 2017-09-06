@@ -1,0 +1,20 @@
+{
+  "name": "static-website",
+  "version": "1.0.0",
+  "description": "gulp + puer",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp & puer -d resource",
+    "watch": "gulp watch"
+  },
+  "author": "xuyanquan",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-ejs": "^3.0.1",
+    "gulp-if": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp_mcss": "^0.3.0",
+    "puer": "https://github.com/leeluolee/puer#next",
+    "sprity": "^1.0.8"
+  }
+}

@@ -1,0 +1,28 @@
+@import './base/_index.mcss';
+
+@abstract '_mixin.mcss';
+/* 基础配置 */
+
+$base-placeholder = #999;
+$vp-w-md = 1024px;
+$vp-w-sm = 768px;
+$vp-w-xs = 320px;
+$vp-h-md = 768px;
+$vp-h-sm = 640px;
+$vp-h-xs = 500px;
+
+$font-base = "Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+
+$display-flex = {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+@abstract clearfix{
+  $clearfix();
+}
+

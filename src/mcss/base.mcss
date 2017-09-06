@@ -1,0 +1,44 @@
+@abstract '_config.mcss';
+/* reset */
+
+*{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+$reset-normalize();
+
+/* function */
+.f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-fl{float:left;}
+.f-fr{float:right;}
+.f-tal{text-align:left;}
+.f-tar{text-align:right;}
+.f-tac{text-align:center;}
+.f-taj{$justify();}
+.f-nowrap{$nowrap();}
+.f-wrap{$wrap();}
+.f-pre{$pre();}
+.f-ellipsis{$ellipsis();}
+.f-noselect{$user-select:none;}
+.f-notext{$hideText();}
+.f-dn{display:none;}
+.f-ib{display:inline-block;*display:inline;*zoom:1;}
+.f-fwb{font-weigth:bold;}
+.f-move{cursor:move;cursor:-webkit-grab;cursor:-moz-grab;cursor:-ms-grab;cursor:-o-grab;}
+.f-pr{position:relative;}
+.f-pa{position:absolute;}
+.f-vbh{visibility:hidden;}
+
+$keyframes(fadeup,($pre){
+	0%{#{$pre}transform:translateY(20%);opacity:0;}
+	100%{#{$pre}transform:translateY(0%);opacity:1;}
+});
+$keyframes(fadein,($pre){
+  0%{opacity:0;}
+  100%{opacity:1;}
+});
+
+.no-select {
+    $user-select: none;
+}

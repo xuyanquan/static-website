@@ -1,0 +1,11 @@
+@abstract '_config.mcss';
+
+@for $cname of pageone, pagetwo {
+    .m-#{$cname} {
+        @for $item of 1...4 {
+            .sec-#{$item} {
+                background: url("/assets/img/m/#{$cname}-#{$item}.png") no-repeat center 140px;
+            }
+        }
+    }
+}
